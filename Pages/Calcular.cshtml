@@ -27,68 +27,39 @@
 
 </form>
 
-@if (Model.BaseCalculo != null)
+@if (Model.MostrarResultado)
 {
-    var baseCalc = Model.BaseCalculo?.ToString("C2");
-    var valorIcms = Model.ValorIcms?.ToString("C2");
+    var baseCalc = Model.BaseCalculo.ToString("C2");
+    var valorIcms = Model.ValorIcms.ToString("C2");
 
     <div class="resultado-box">
 
         <p class="resultado-texto">
-            BASE DE CALCULO ICMS ST: <strong>@baseCalc</strong> / VALOR DE ICMS ST: <strong>@valorIcms</strong>
+            BASE DE CALCULO ICMS ST: <strong>@baseCalc</strong> 
+            / VALOR DE ICMS ST: <strong>@valorIcms</strong>
         </p>
 
         <button type="button" class="botao-copiar" onclick="copiarResultado()">Copiar</button>
     </div>
 
     <script>
-    function copiarResultado() {
-        const base = "@baseCalc";
-        const valor = "@valorIcms";
+        function copiarResultado() {
 
-        const texto =
-            "BASE DE CALCULO ICMS ST: " + base +
-            " / VALOR DE ICMS ST: " + valor;
+            const base = "@baseCalc";
+            const valor = "@valorIcms";
 
-        navigator.clipboard.writeText(texto);
+            const texto =
+                "BASE DE CALCULO ICMS ST: " + base +
+                " / VALOR DE ICMS ST: " + valor;
 
-        const botao = document.querySelector(".botao-copiar");
-        botao.innerText = "Copiado!";
-        
-        setTimeout(() => {
-            botao.innerText = "Copiar";
-        }, 1500);
-    }
-</script>
+            navigator.clipboard.writeText(texto);
 
-}
+            const botao = document.querySelector(".botao-copiar");
+            botao.innerText = "Copiado!";
 
-<script>
-    function gerarCampos() {
-
-        const quantidade = document.getElementById("qtdModelos").value;
-        const container = document.getElementById("areaPneus");
-
-        container.innerHTML = "";
-
-        for (let i = 0; i < quantidade; i++) {
-
-            const div = document.createElement("div");
-            div.classList.add("linha-pneu");
-
-            div.innerHTML = `
-                <h4>Modelo ${i + 1}</h4>
-
-                <label>Preço:</label>
-                <input type="text" name="Pneus[${i}].Preco" required />
-
-                <label>Quantidade:</label>
-                <input type="number" name="Pneus[${i}].Quantidade" required />
-
-                <hr />
-            `;
-
-            container.appendChild(div);
+            setTimeout(() => {
+                botao.innerText = "Copiar";
+            }, 1500);
         }
-    }
-</script>
+    </script>
+}

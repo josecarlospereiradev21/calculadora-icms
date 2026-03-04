@@ -15,8 +15,9 @@ namespace CalculaIcmsWeb.Pages
         [BindProperty]
         public List<PneuInput> Pneus { get; set; } = new List<PneuInput>();
 
-        public decimal? BaseCalculo { get; set; }
-        public decimal? ValorIcms { get; set; }
+        public decimal BaseCalculo { get; set; }
+        public decimal ValorIcms { get; set; }
+        public bool MostrarResultado { get; set; }
 
         public void OnGet()
         {
@@ -24,6 +25,7 @@ namespace CalculaIcmsWeb.Pages
 
         public void OnPost()
         {
+            MostrarResultado = true;
             var calc = new IcmsPneuCalculator();
 
             decimal totalBase = 0;
