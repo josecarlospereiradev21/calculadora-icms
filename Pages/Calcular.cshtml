@@ -1,0 +1,94 @@
+@page
+@model CalcularModel
+@{
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/calcular.css" />
+
+<a href="/">
+    <img src="/img/1533063204.svg" alt="Voltar" class="img-voltar" />
+</a>
+
+<h1 class="display-3">Calcular ICMS de Pneus</h1>
+
+<form method="post">
+
+    <label>Insira quantos modelos são?</label>
+    <input type="number" id="qtdModelos" min="1" />
+    <button type="button" onclick="gerarCampos()">Gerar</button>
+
+    <hr />
+
+    <div id="areaPneus"></div>
+
+    <br />
+    <button type="submit">Calcular</button>
+
+</form>
+
+@if (Model.BaseCalculo != null)
+{
+    var baseCalc = Model.BaseCalculo?.ToString("C2");
+    var valorIcms = Model.ValorIcms?.ToString("C2");
+
+    <div class="resultado-box">
+
+        <p class="resultado-texto">
+            BASE DE CALCULO ICMS ST: <strong>@baseCalc</strong> / VALOR DE ICMS ST: <strong>@valorIcms</strong>
+        </p>
+
+        <button type="button" class="botao-copiar" onclick="copiarResultado()">Copiar</button>
+    </div>
+
+    <script>
+    function copiarResultado() {
+        const base = "@baseCalc";
+        const valor = "@valorIcms";
+
+        const texto =
+            "BASE DE CALCULO ICMS ST: " + base +
+            " / VALOR DE ICMS ST: " + valor;
+
+        navigator.clipboard.writeText(texto);
+
+        const botao = document.querySelector(".botao-copiar");
+        botao.innerText = "Copiado!";
+        
+        setTimeout(() => {
+            botao.innerText = "Copiar";
+        }, 1500);
+    }
+</script>
+
+}
+
+<script>
+    function gerarCampos() {
+
+        const quantidade = document.getElementById("qtdModelos").value;
+        const container = document.getElementById("areaPneus");
+
+        container.innerHTML = "";
+
+        for (let i = 0; i < quantidade; i++) {
+
+            const div = document.createElement("div");
+            div.classList.add("linha-pneu");
+
+            div.innerHTML = `
+                <h4>Modelo ${i + 1}</h4>
+
+                <label>Preço:</label>
+                <input type="text" name="Pneus[${i}].Preco" required />
+
+                <label>Quantidade:</label>
+                <input type="number" name="Pneus[${i}].Quantidade" required />
+
+                <hr />
+            `;
+
+            container.appendChild(div);
+        }
+    }
+</script>

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculaIcmsWeb", "CalculaIcmsWeb.csproj", "{47A2F5BD-A7E4-ACBF-704A-A9818B188849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47A2F5BD-A7E4-ACBF-704A-A9818B188849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A2F5BD-A7E4-ACBF-704A-A9818B188849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A2F5BD-A7E4-ACBF-704A-A9818B188849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A2F5BD-A7E4-ACBF-704A-A9818B188849}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F1BAC92-A3E3-4151-97E8-473C61CCEBBC}
+	EndGlobalSection
+EndGlobal

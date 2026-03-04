@@ -1,0 +1,120 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn-primary {
+    background-color: #ffcc00; /* amarelo (combina com tema pneu / borracha / sinalização) */
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 14px 28px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10%;
+    
+}
+
+/* efeito hover */
+.btn-primary:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+    color: #000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: black;
+  background-image: url("/img/image_pneu.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 100% top;
+  background-attachment: fixed; /*faz a imagem ficar fixa */
+  color: #ffcc00;
+  margin-bottom: 60px;
+}
+
+h1.display-4 {
+    font-size: 60px;      /* aumenta o tamanho */
+    font-weight: bold;    
+    color: #ffffff;       /* deixa branco */
+    text-shadow: 3px 3px 8px rgba(0,0,0,.9); /* sombra pra destacar */
+    margin-top: 80px;    /* desce o título pra baixo */
+    letter-spacing: 3px;  /* espaço entre letras */
+    text-transform: uppercase; /* deixa tudo em maiúsculo */
+}
+
+h1.display-3 {
+    font-size: 40px;      /* aumenta o tamanho */
+    font-weight: bold;    
+    color: #ffffff;       /* deixa branco */
+    text-shadow: 2px 1px 1px #ffcc00; /* sombra pra destacar */
+    margin-top: 80px;    /* desce o título pra baixo */
+    letter-spacing: 3px;  /* espaço entre letras */
+    text-transform: uppercase; /* deixa tudo em maiúsculo */
+}
+
+.resultado-box {
+    margin-top: 40px;
+    text-align: center;
+    background: rgba(0,0,0,0.55);
+    padding: 25px;
+    border-radius: 12px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.resultado-texto strong {
+    color: #ffcc00;
+}
+
+.botao-copiar {
+    width: 200px;
+    display: block;
+    margin: 10px auto;  /* centraliza */
+    padding: 5px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botao-copiar:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+.img-voltar {
+    width: 45px;     /* controla o tamanho */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    transition: 0.3s;
+}
+
+.img-voltar:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
