@@ -15,7 +15,7 @@
 <form method="post">
 
     <label>Insira quantos modelos são?</label>
-    <input type="number" id="qtdModelos" min="1" />
+    <input type="number" id="qtdModelos" name="qtdModelos" min="1" />
     <button type="button" onclick="gerarCampos()">Gerar</button>
 
     <hr />
@@ -33,7 +33,6 @@
     var valorIcms = Model.ValorIcms.ToString("C2");
 
     <div class="resultado-box">
-
         <p class="resultado-texto">
             BASE DE CALCULO ICMS ST: <strong>@baseCalc</strong> 
             / VALOR DE ICMS ST: <strong>@valorIcms</strong>
@@ -44,7 +43,6 @@
 
     <script>
         function copiarResultado() {
-
             const base = "@baseCalc";
             const valor = "@valorIcms";
 
@@ -63,3 +61,26 @@
         }
     </script>
 }
+
+<script>
+function gerarCampos() {
+    const qtd = document.getElementById("qtdModelos").value;
+    const area = document.getElementById("areaPneus");
+
+    area.innerHTML = "";
+
+    for (let i = 0; i < qtd; i++) {
+        area.innerHTML += `
+            <div style="margin-bottom:10px;">
+                <h4>Modelo ${i + 1}</h4>
+
+                <label>Preço:</label>
+                <input type="number" step="0.01" name="Pneus[${i}].Preco" required />
+
+                <label>Quantidade:</label>
+                <input type="number" name="Pneus[${i}].Quantidade" required />
+            </div>
+        `;
+    }
+}
+</script>
