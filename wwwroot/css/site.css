@@ -6,6 +6,29 @@ html {
   html {
     font-size: 16px;
   }
+
+  @media (max-width:600px){
+
+    h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+}
+
+@media (max-width:600px){
+
+    #qtdModelos{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    button{
+        width:100%;
+    }
+
+}
+
 }
 
 .btn-primary {
@@ -113,6 +136,12 @@ h1.display-3 {
 
 .img-voltar:hover {
     transform: scale(1.1);
+}
+
+.container{
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
 }
 
 

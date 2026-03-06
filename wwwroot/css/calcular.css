@@ -22,6 +22,7 @@ input {
     border-radius: 6px;
     border: none;
     margin-bottom: 20px;
+    box-sizing:border-box;
 }
 
 button {
@@ -39,4 +40,8 @@ button {
 button:hover {
     background: #ffaa00;
     transform: scale(1.04);
+}
+
+.resultado-texto{
+    word-break:break-word;
 }
