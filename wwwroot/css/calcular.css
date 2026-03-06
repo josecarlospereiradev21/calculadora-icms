@@ -40,20 +40,3 @@ button:hover {
     background: #ffaa00;
     transform: scale(1.04);
 }
-
-.resultado-box{
-    margin-top:20px;
-    padding:20px;
-    border-radius:10px;
-    background:#111;
-    text-align:center;
-}
-
-.resultado-texto{
-    font-size:20px;
-    word-break: break-word;
-}
-
-.botao-copiar{
-    margin-top:10px;
-}

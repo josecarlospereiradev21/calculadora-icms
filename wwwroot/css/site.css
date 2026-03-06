@@ -115,26 +115,6 @@ h1.display-3 {
     transform: scale(1.1);
 }
 
-.linha-pneu{
-    margin-bottom:20px;
-}
-
-.linha-pneu label{
-    display:block;
-    margin-top:8px;
-}
-
-.linha-pneu input{
-    width:100%;
-    padding:6px;
-    margin-top:3px;
-}
-
-button{
-    padding:8px 15px;
-    margin-top:10px;
-}
-
 
 
 
