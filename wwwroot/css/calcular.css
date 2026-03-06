@@ -45,3 +45,14 @@ button:hover {
 .resultado-texto{
     word-break:break-word;
 }
+
+@media (max-width: 600px){
+
+    .resultado-texto{
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
