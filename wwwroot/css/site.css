@@ -35,9 +35,10 @@ html {
   }
 
   button, .btn-primary{
-    width:100%;
-    font-size:18px;
-    padding:12px;
+    width:auto;
+    font-size:16px;
+    padding: 10px 14px;
+    margin-top: 15px;
   }
 
   /* CAIXA DE RESULTADO */
@@ -46,6 +47,7 @@ html {
     padding: 20px;
     font-size: 15px;
     margin-top: 25px;
+
   }
 
   /* BOTÃO COPIAR */
@@ -77,7 +79,7 @@ html {
     font-size: 20px;
     border-radius: 10px;
     transition: 0.3s;
-    margin-top: 20px;
+    margin-top: 70px;
     box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
     
 }
@@ -110,7 +112,7 @@ h1.display-4 {
     font-weight: bold;    
     color: #ffffff;       /* deixa branco */
     text-shadow: 3px 3px 8px rgba(0,0,0,.9); /* sombra pra destacar */
-    margin-top: 80px;    /* desce o título pra baixo */
+    margin-top: 0px;    /* desce o título pra baixo */
     letter-spacing: 3px;  /* espaço entre letras */
     text-transform: uppercase; /* deixa tudo em maiúsculo */
 }
@@ -121,7 +123,7 @@ h1.display-3 {
     font-weight: bold;    
     color: #ffffff;       /* deixa branco */
     text-shadow: 2px 1px 1px #ffcc00; /* sombra pra destacar */
-    margin-top: 80px;    /* desce o título pra baixo */
+    margin-top: 50px;    /* desce o título pra baixo */
     letter-spacing: 3px;  /* espaço entre letras */
     text-transform: uppercase; /* deixa tudo em maiúsculo */
 }
@@ -192,17 +194,14 @@ h1.display-3 {
     align-items: center;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: -1;
-}
-
 * {
   box-sizing: border-box;
 }
+
+.text-center {
+  margin-top: 50px;
+}
+
 
 
 
