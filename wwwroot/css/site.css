@@ -9,35 +9,62 @@ html {
   }
 }
 
-/* MOBILE */
 @media (max-width:600px){
-  h1{
-    font-size:28px;
-    text-align:center;
+
+  body {
+    background-attachment: scroll;
+    background-size: cover;
   }
 
+  /* TITULOS */
+  h1.display-4 {
+    font-size: 28px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+  }
+
+  h1.display-3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  /* INPUT E BOTÕES */
   #qtdModelos{
     width:100%;
     margin-bottom:10px;
   }
 
-  button{
+  button, .btn-primary{
     width:100%;
-  }
-  body {
-    background-attachment: scroll; /* corrige bug no celular */
-  }
-  .resultado-box {
-    width: 90%;
-  }
-  h1.display-4 {
-    font-size: 32px;
-    margin-top: 40px;
+    font-size:18px;
+    padding:12px;
   }
 
-  h1.display-3 {
-    font-size: 24px;
-    margin-top: 40px;
+  /* CAIXA DE RESULTADO */
+  .resultado-box {
+    width: 95%;
+    padding: 20px;
+    font-size: 15px;
+    margin-top: 25px;
+  }
+
+  /* BOTÃO COPIAR */
+  .botao-copiar {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* CONTAINER */
+  .container {
+    padding: 15px;
+  }
+
+  /* BOTÃO VOLTAR */
+  .img-voltar {
+    width: 35px;
+    top: 8px;
+    left: 8px;
   }
 }
 
@@ -111,7 +138,7 @@ h1.display-3 {
     color: white;
     font-size: 16px;
     font-weight: bold;
-
+    overflow: hidden;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,204,0,0.2);
     box-shadow: 0 8px 30px rgba(0,0,0,0.6);
@@ -124,10 +151,11 @@ h1.display-3 {
 }
 
 .botao-copiar {
-    width: 200px;
+    width: 100%;
+    max-width: 100%;
     display: block;
     margin: 10px auto;  /* centraliza */
-    padding: 5px 12px;
+    padding: 12px;
     font-size: 18px;
     font-weight: bold;
     background-color: #ffcc00;
@@ -170,6 +198,10 @@ body::before {
   inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 
